@@ -1,5 +1,11 @@
 import React from "react";
 
-export default function () {
-  return <p id="call-to-action"> Make your move!</p>;
+export default function ({ result, handleReset }) {
+  const action = result ? (
+    <button onClick={handleReset}>Reset</button>
+  ) : (
+    <p> Make your move!</p>
+  );
+
+  return <div className="call-to-action">{action}</div>;
 }

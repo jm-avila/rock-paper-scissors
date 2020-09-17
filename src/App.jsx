@@ -6,7 +6,11 @@ import {
   Result,
   Choices,
   CallToAction,
+  withBorder,
 } from "./components";
+
+const ScoreBoardWithBorder = withBorder(ScoreBoard);
+const ChoicesWithBorder = withBorder(Choices);
 
 function App() {
   const [userScore, setUserScore] = useState(0);
@@ -22,14 +26,14 @@ function App() {
   function gameResult(userInput, computerInput) {
     switch (userInput + computerInput) {
       //WIN
-      case "rock" + "scissors":
-      case "paper" + "rock":
-      case "scissors" + "paper":
+      case "rockscissors":
+      case "paperrock":
+      case "scissorspaper":
         return "win";
       // LOOSE
-      case "rock" + "paper":
-      case "paper" + "scissors":
-      case "scissors" + "rock":
+      case "rockpaper":
+      case "paperscissors":
+      case "scissorsrock":
         return "loose";
       // Anything else is a TIE
       default:
@@ -58,17 +62,23 @@ function App() {
     }
   }
 
+  function handleReset() {
+    setUserScore(0);
+    setComputerScore(0);
+    setResult();
+  }
+
   return (
     <div>
       <Header />
-      <ScoreBoard
+      <ScoreBoardWithBorder
         userScore={userScore}
         computerScore={computerScore}
         result={result}
       />
       <Result />
-      <Choices userChoice={game} />
-      <CallToAction />
+      <ChoicesWithBorder userChoice={game} result={result} />
+      <CallToAction result={result} handleReset={handleReset} />
     </div>
   );
 }

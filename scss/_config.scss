@@ -7,3 +7,15 @@
 body {
   background-color: #292c34;
 }
+
+.loose {
+  border-color: red !important;
+}
+
+.win {
+  border-color: green !important;
+}
+
+.tie {
+  border-color: yellow !important;
+}

@@ -1,13 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-export default function ({ userScore, computerScore, result }) {
-  const [borderResultClass, setBorderResultClass] = useState("");
-
-  useEffect(() => {
-    if (result) setBorderResultClass(result);
-  }, [result]);
-
-  const divClass = `score-board ${borderResultClass}`;
+export default function ({ userScore, computerScore, borderResultClass }) {
+  const divClass = `score-board ${borderResultClass}`.trim();
 
   return (
     <div className={divClass}>

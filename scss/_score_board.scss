@@ -1,6 +1,6 @@
 .score-board {
   margin: 20px auto;
-  border: 3px solid white;
+  border: 3px solid;
   border-radius: 4px;
   text-align: center;
   width: 200px;
@@ -30,16 +30,4 @@
       right: -30px;
     }
   }
-}
-
-.loose {
-  border-color: red;
-}
-
-.win {
-  border-color: green;
-}
-
-.tie {
-  border-color: yellow;
 }
