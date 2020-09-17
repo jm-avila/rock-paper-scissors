@@ -1,12 +1,13 @@
 import React from "react";
 import "./css/main.css";
-import { Header, ScoreBoard } from "./components";
+import { Header, ScoreBoard, Result } from "./components";
 
 function App() {
   return (
     <div>
       <Header />
       <ScoreBoard />
+      <Result />
     </div>
   );
 }
