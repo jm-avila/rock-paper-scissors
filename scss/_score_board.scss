@@ -9,6 +9,7 @@
   padding: 15px 20px;
   font-family: $fontFamily;
   position: relative;
+  transition: all 2s ease;
 
   .badge {
     background: #e2584d;
@@ -29,4 +30,16 @@
       right: -30px;
     }
   }
+}
+
+.loose {
+  border-color: red;
+}
+
+.win {
+  border-color: green;
+}
+
+.tie {
+  border-color: yellow;
 }
