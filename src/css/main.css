@@ -99,6 +99,10 @@ header > h1 {
   background: yellow;
 }
 
+.choices .choice:focus {
+  outline: none;
+}
+
 #call-to-action {
   text-align: center;
   color: white;

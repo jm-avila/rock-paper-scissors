@@ -15,5 +15,9 @@
       cursor: pointer;
       background: yellow;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
