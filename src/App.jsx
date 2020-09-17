@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/main.css";
-import { Header, ScoreBoard, Result } from "./components";
+import { Header, ScoreBoard, Result, Choices } from "./components";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Header />
       <ScoreBoard />
       <Result />
+      <Choices />
     </div>
   );
 }
