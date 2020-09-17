@@ -76,7 +76,7 @@ function App() {
         computerScore={computerScore}
         result={result}
       />
-      <Result />
+      <Result result={result} />
       <ChoicesWithBorder userChoice={game} result={result} />
       <CallToAction result={result} handleReset={handleReset} />
     </div>
