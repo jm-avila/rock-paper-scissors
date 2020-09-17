@@ -1,6 +1,12 @@
 import React from "react";
 import "./css/main.css";
-import { Header, ScoreBoard, Result, Choices } from "./components";
+import {
+  Header,
+  ScoreBoard,
+  Result,
+  Choices,
+  CallToAction,
+} from "./components";
 
 function App() {
   return (
@@ -9,6 +15,7 @@ function App() {
       <ScoreBoard />
       <Result />
       <Choices />
+      <CallToAction />
     </div>
   );
 }
